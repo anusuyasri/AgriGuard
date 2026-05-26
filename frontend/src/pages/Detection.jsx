@@ -41,7 +41,7 @@ export default function Detection() {
     const form = new FormData();
     form.append('image', image);
     try {
-      const res = await axios.post('http://localhost:5000/api/detect-disease', form, {
+      const res = await axios.post('https://agriguard-y257.onrender.com/api/detect-disease', form, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       setResult(res.data);
