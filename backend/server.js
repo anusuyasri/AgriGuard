@@ -78,7 +78,7 @@ app.post('/api/detect-disease', upload.single('image'), async (req, res) => {
       contentType: req.file.mimetype,
     });
 
-    const mlResponse = await axios.post('http://localhost:8000/predict', form, {
+    const mlResponse = await axios.post('https://agriguard-1-l792.onrender.com/predict', form, {
       headers: form.getHeaders(),
       timeout: 30000,
     });
